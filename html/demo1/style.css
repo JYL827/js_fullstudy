@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    /* 外边距 */
 }
 .page{
     padding: 50px 20px;
@@ -24,11 +25,13 @@
     /* 圆角弧度 */
     /* display: inline-block;  */
     float: left;
+    /* 向左浮动 */
     margin-right: 20px;
 }
 .content:last-child{
     margin-right: 0;
 }
+/* 最后一个子容器 */
 .content-title{
     font-weight: bold;
     font-size: 20px;
@@ -36,12 +39,14 @@
 }
 .content-desc{
     margin-top: 30px;
+    /* 上外边距 */
     margin-bottom: 50px;
+    /* 下外边距 */
 }
-.content.img{
+.content .img{
    width: 295px;
    height: 295px;
-   margin: o auto;
+   margin: 0 auto;
 }
 .img img{
     width: 100%;
