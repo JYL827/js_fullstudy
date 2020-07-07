@@ -1,0 +1,123 @@
+body{
+    margin: 0px;
+    background-color: rgb(109, 109, 226);
+}
+.container{
+    position: absolute;
+    top: 10%;
+    left: 27%;
+    width: 700px;
+    height: 750px;
+}
+.leaf{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #32ff7e;
+    box-shadow: inset 10px 20px 14px #1dcd59;
+    position: absolute;
+}
+.leaf-l{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #32ff7e;
+    left: 10px;
+    top: 100px;
+    box-shadow: inset 15px -15px 14px #1dcd59;
+    z-index: 45;
+}
+.leaf-r{
+    left: 130px;
+    top: 50px;
+    z-index: 50;
+    box-shadow: inset -30px -25px 14px #1dcd59;
+}
+.leaf-u{
+    left: 80px;
+    top: 0;
+} 
+.trunk-l{
+    width: 20px;
+    height: 80px;
+    top: 280px;
+    left: 120px;
+    border-radius: 10%;
+    background-color: rgb(73, 31, 31);
+    transform: rotate(315deg);
+    position: absolute;
+}
+.trunk-r{
+    width: 20px;
+    height: 120px;
+    top: 280px;
+    left: 250px;
+    border-radius: 10%;
+    background-color: rgb(73, 31, 31);
+    transform: rotate(25deg);
+    position: absolute;
+} 
+.trunk-m{
+    width: 100px;
+    height: 300px;
+    top: 270px;
+    left: 150px;
+    border-radius: 10%;
+    background-color: rgb(73, 31, 31);
+    position: absolute;
+    z-index: 40;
+}
+.trush{
+    width: 150px;
+    height: 240px;
+    top: 337px;
+    left: 500px;
+    border-radius: 10%;
+    background-color: orange;
+    position: absolute;
+    z-index: 50;
+}
+.mouth{
+    width: 120px;
+    height: 50px;
+    top: 25px;
+    left: 16px;
+    border-radius: 15%;
+    background-color: rgb(73, 31, 31);
+    position: absolute;
+}
+.chin{
+    width: 120px;
+    height: 16px;
+    top: 67px;
+    left: 16px;
+    border-radius: 10%;
+    background-color: rgb(192, 188, 133);
+    position: absolute;
+}
+.grass-b{
+    width: 700px;
+    height: 120px;
+    left: 0;
+    top: 460px;
+    background-color: rgb(47, 121, 80);
+    position: absolute; 
+    border-radius: 10%;
+}
+.grass-d{
+    width: 700px;
+    height: 40px;
+    left: 0;
+    top: 560px;
+    background-color: rgb(60, 160, 130);
+    position: absolute;
+    z-index: 60;
+}
+.grass-l{
+    width: 700px;
+    height: 120px;
+    left: 0;
+    top: 600px;
+    background-color: rgb(47, 121, 80);
+    position: absolute;
+}
