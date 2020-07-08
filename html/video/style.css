@@ -19,11 +19,12 @@ body{
 }
 video{
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
-    /* box-shadow三个属性： X轴偏移，Y轴偏移，阴影宽度，颜色rgb后面的a表示透明度 */
+    /* box-shadow三个属性： X轴偏移，Y轴偏移，模糊程度，越大越模糊，颜色rgb后面的a表示透明度 */
 }
 .speed{
     background: rgb(245, 242, 242);
     flex: 1;
+    /* 子容器自动放大，占满剩余空间，常用于自适应布局 */
     margin: 10px;
     border-radius: 50px;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
@@ -36,6 +37,7 @@ video{
     width: 100%;
     height: 16.3%;
     background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+    /* 背景颜色线性渐变，角度，初始颜色，终点颜色 */
     display: flex;
     justify-content: center;
     align-items: center;
