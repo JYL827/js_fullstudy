@@ -18,6 +18,8 @@
         <div id="grassLand2"></div><!--草地2-->
     </div>
     <script src="./js/bird.js"></script>
+    <script src="./js/baseObj.js"></script>
+    <script src="./js/block.js"></script>
     <script>
         var jsWrapBg = document.getElementById('wrapBg')
         var jsHeadTitle = document.getElementById('headTitle')
@@ -53,14 +55,22 @@
 
 
         var jsStartBtn = document.getElementById('startBtn')
-        console.log(jsWrapBg)
         jsStartBtn.onclick = function() {//为start按钮添加一个点击事件
             jsHeadTitle.style.display = 'none'//隐藏标题
             clearInterval(headWaveTimer)//关闭标题摆动的定时器
             jsStartBtn.style.display = 'none'
             //插入小鸟到界面中
-            console.log(jsWrapBg)
+            // console.log(jsWrapBg)
             bird.showBird(jsWrapBg)
+            bird.flyBird()//小鸟下落
+            bird.wingWave()
+            jsWrapBg.onclick = function() {
+                bird.fallSpeed = -8  
+            }
+
+            // 出现管道
+            var b = new Block()
+            b.createBlock()
         }
     </script>
 </body>
