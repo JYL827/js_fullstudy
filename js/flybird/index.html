@@ -41,7 +41,11 @@
 
         var jsGrassLand1 = document.getElementById('grassLand1')
         var jsGrassLand2 = document.getElementById('grassLand2')
-        var landTimer = setInterval(landRun, 30)//让草地动起来
+        var landTimer = setInterval(landRun, 30)
+        var blockArr = []//装管道
+        var blockDistance = baseObj.randomNum(120,350) //管道之间的间隔
+
+        //让草地动起来
         function landRun() {
             if(jsGrassLand1.offsetLeft <= -343) {
                 jsGrassLand1.style.left = 343 + 'px'
@@ -51,6 +55,28 @@
             }            
             jsGrassLand1.style.left = jsGrassLand1.offsetLeft - 3 + 'px'
             jsGrassLand2.style.left = jsGrassLand2.offsetLeft - 3 + 'px'
+
+            //管道移动
+            if (blockArr.length) {
+                for (var i = 0;i < blockArr.length; i++) {
+                    blockArr[i].moveBlock()
+                    var x = baseObj.rectangleCrashExamine(blockArr[i].downDivWrap, bird.div)
+                    var y = baseObj.rectangleCrashExamine(blockArr[i].upDivWrap, bird.div)
+                    var z =bird.div.offsetTop >= 390
+                    if (x || y || z) {
+                        clearInterval(landTimer) //清除草地移动的定时器
+                        jsWrapBg.onclick = null
+                        bird.fallSpeed = 0
+                    }
+                }
+            }
+            if (blockArr.length) {
+                if (blockArr[blockArr.length - 1].downDivWrap.offsetLeft < (450 - blockDistance)){
+                    var newBlock = new Block()
+                    newBlock.createBlock()
+                    blockArr.push(newBlock)
+                }
+             }
         }
 
 
@@ -71,6 +97,7 @@
             // 出现管道
             var b = new Block()
             b.createBlock()
+            blockArr.push(b)        
         }
     </script>
 </body>

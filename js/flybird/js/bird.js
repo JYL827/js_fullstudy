@@ -25,8 +25,8 @@ var bird = {
                 clearInterval(bird.flyTimer)
                 clearInterval(bird.wingTimer)
             }
-            if (bird.fallSpeed > 12) { //控制小鸟的下落速度最高为12
-                bird.fallSpeed = 12
+            if (bird.fallSpeed > 20) { //控制小鸟的下落速度最高为12
+                bird.fallSpeed = 20
             }
             if (bird.div.offsetTop <= 0){
                 bird.div.style.top = '0'
