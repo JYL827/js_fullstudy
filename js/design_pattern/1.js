@@ -19,7 +19,9 @@ function calculateBonus(salary,level = "C") {
         throw new TypeError('工资必须是整数')       
     }
         salary = parseInt(salary);
-    if (['A','B','C','D','S'].indexOf(level) == -1) {
+        // parseInt 取整
+    if (['A','B','C','D','S'].indexOf(level) == -1) { 
+        // indeOf 检测字符串中第一个出现的字符，如果没有出现，则返回 -1
         throw new Error('错误的等级')
     }
     
