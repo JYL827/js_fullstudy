@@ -1,0 +1,42 @@
+<!--pages/main/main.wxml-->
+<view class="container">
+    <scroll-view scroll-y style="height:100%">
+        <view class="header">
+            <view class="header_hd">
+                <text>南昌</text>
+                <view class="downtips"></view>
+            </view>
+            <view class="header_bd">
+                <view class="header_bd-hot header_bd-btn" style="color:{{isLeft?'#ef4238':'#666'}}" bindtap="tabChangeHot">正在上映</view>
+                <view class="header_bd-waiting header_bd-btn" style="color:{{isLeft?'#666':'#ef4238'}}" bindtap="tabChangeWaiting">即将上映</view>
+                <view class="bottomLine" style="left:{{isLeft?'73px':'143px'}}"></view>
+            </view>            
+            <view class="header_ft">
+                <image src="../../images/icon_magnifier.png" alt=""></image>
+            </view>
+        </view>
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" current="0">
+            <swiper-item>
+                <image class="slide-image" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1571962620,2503096562&fm=15&gp=0.jpg"/>                     
+            </swiper-item>
+            <swiper-item >
+                <image class="slide-image" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594983240737&di=069ef362318d5e4fc31152f466a80847&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn10113%2F691%2Fw1080h411%2F20200303%2F8af2-iqfqmat8055324.jpg" />               
+            </swiper-item>              
+        </swiper>
+          
+        <view wx:for="{{movieList}}" wx:key="index">
+            <view class="flex item">
+                <view class="item_left">
+                    <image src="{{item.imgUrl}}"/>
+                </view>
+                <view class="item_middle">
+                    1234
+                </view>
+                <view class="item_right">
+                    按钮              
+                </view>
+            </view>
+        </view>
+          
+    </scroll-view>
+</view>
