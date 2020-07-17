@@ -4,11 +4,112 @@
     padding 0
 body
     background #f6f6f6
+    color #191919
+    font-size 12px
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif
+    position relative
 #TalionNav
     .TalionNav
         width 100%
         position relative
         background #fff
         z-index 9999
-
-                
+    .TalionNav-primary-wrap
+        .TalionNav-primary
+            display: flex
+            justify-content: flex-start
+            align-items center
+            box-sizing: border-box
+            height 50px
+            position fixed
+            top 0
+            left 0
+            width 100%
+            z-index: 100
+            padding 0 15px
+            background-color: #fff
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05)            
+            .logo
+                display: inline-block   
+                font-size 0
+                height 26px
+                width 54px
+                flex: 54px 0 0
+                background: url(./images/douban.png) 50% no-repeat
+                background-size contain
+                margin-right 15px
+            a
+                text-decoration: none
+                margin 0
+                padding 0
+                color #42bd56
+                -webkit-tap-highlight-color: transparent
+                &.input
+                    outline 0
+                h1
+                    opacity 0
+                    margin 30px 0 5px
+                    line-height 32px
+                    word-break: break-all
+                    font-weight normal
+            .search-box
+                width 100px
+                flex: 100px 0 0
+                height 30px
+                border-radius 15px
+                border 1px solid #dfdfdf
+                color rgba(0,0,0,0.25)
+                background-color: #f7f7f7
+                font-size 15px
+                line-height 21px
+                padding-left 8px
+                display flex
+                justify-content: flex-start
+                align-items: center
+                box-sizing: border-box
+                input
+                    box-sizing: border-box
+                    border 0
+                    padding-left 20px
+                    background url(./images/search.png) no-repeat 0
+                    background-size: 17.33333px
+                    border-radius 3px
+                    width 100%
+                    height 31px
+                    font-size 14px
+                    outline: 0
+                    -webkit-tap-highlight-color: transparent
+            .nav-btns
+                flex: 1
+                font-size 15px
+                line-height 21px
+                color #3ba94d
+                text-align: right
+                display flex
+                justify-content: flex-end
+                align-items: center
+                .to_pc
+                    display inline-block
+                    width 20px
+                    height 19px
+                    background url(./images/btn.png) 100% no-repeat
+                    background-size: contain
+                a
+                    text-decoration: none
+                    margin 0
+                    padding 0
+                    color #42bd56
+                    -webkit-tap-highlight-color: transparent
+                    &.input
+                        outline 0
+        .TalionNav-static
+            left 0
+            width 100%
+            background-color: #f7f7f7
+            align-items center
+            margin-top 50px
+            padding 0 18px
+            height 60px
+            background-size: border-box
+            display: flex
+            justify-content: space-between
