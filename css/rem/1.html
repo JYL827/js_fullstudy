@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.5"> -->
+    <title>Document</title>
+    <script>
+        var ratio = 1/window.devicePixelRatio
+        var meta = document.createElement('meta')
+        meta.name = 'viewport'
+        meta.content = 'initial-scale=' + ratio
+        var head = document.querySelector('head')
+        head.appendChild(meta)
+        // 1rem = 屏幕宽度 / 10 
+        var width = window.innerWidth / 10
+        // console.log(width)
+        var html = document.querySelector('html')
+        html.style.fontSize = width + 'px';
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            /* 不同设备上面调整 html的 font-size */
+            /* 调整多少？？结合设计稿 */
+            /* 设备物理像素 / 逻辑像素(css: 1px) = DPR */
+            /* font-size: 80px; */
+        }
+        div {
+            /* font-size: 30px; */
+            /* 
+            60px: 无论在哪个设备上面 都是 死的值
+             */
+            /* width: 3rem; */
+            /* height: 3rem; */
+            /* width = 3*20px = 60px */
+            /* background-color: green; */
+        }
+        input {
+            /* height: 56px; */
+            height: 0.7466666667rem;
+            /* width: 444px; */
+            width: 5.92rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+</body>
+</html>
