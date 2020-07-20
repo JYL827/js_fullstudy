@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="tips">
+    <view class="tip1">
+      骑 出 运 营 区 域
+    </view>
+    <view class="tip2">
+      助 力 车 自 动 关 闭
+    </view>
+  </view>
+  <view class="fuc">
+    <view class="fuc-up">
+      <image class="lightning" src="/resources/lightning.png" />
+    </view>
+    <view class="fuc-down">
+       p
+    </view>
+  </view>
+  <view class="ride">
+      <image class="scan" src="/resources/scan.png" />
+      <view class="rental">
+        扫码用车
+      </view>  
+  </view>
+  <map id="map" 
+    longitude="115.830064" 
+    latitude="28.714234" 
+    markers="{{markers}}" 
+    controls="{{controls}}"
+    show-location 
+    style="width: 100%; height: 570px;"
+    ></map>
+</view>

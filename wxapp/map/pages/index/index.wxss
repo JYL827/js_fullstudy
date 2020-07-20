@@ -1,0 +1,84 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.tips {
+  width: 350px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.tip1 {
+  font-size: 13px;
+  position: absolute;
+  display: inline-block;
+  left: 60px;
+  top: 15px;
+}
+.tip2 {
+  font-size: 13px;
+  position: absolute;
+  display: inline-block;
+  top: 15px;
+  color: orange;
+}
+.fuc {
+  width: 40px;
+  height: 100px;
+  position: absolute;
+  right: 36rpx;
+  top: 400rpx;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.fuc-up {
+  height: 45px;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  border-bottom: 4rpx solid #f2f2f2 ;
+}
+.lightning {
+  width: 30px;
+  height: 35px;
+}
+.fuc-down {
+  height: 50px;
+  font-size: 30px;
+  color: #a2a2a2;
+  position: absolute;
+  top: 55px;
+  right: 10px;
+}
+.ride {
+  position: absolute;
+  background-color: #26292f;
+  color: #fff;
+  font-size: 20px;
+  height: 113.9rpx;
+  width: 707rpx;
+  bottom: 106.9rpx;
+  text-align: center;
+  z-index: 1;
+  border-radius: 10px;
+}
+.scan {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  left: 80px;
+  top: 15px;
+}
+.rental {
+  position: absolute;
+  height: 60rpx;
+  display: inline-block;
+  left: 145px;
+  top: 15px;
+}
