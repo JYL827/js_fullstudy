@@ -9,15 +9,15 @@ Page({
       id: 0,
       latitude: 28.711034,
       longitude: 115.830064,
-      width: 30,
-      height: 30
+      width: 20,
+      height: 20
     }, {
       iconPath: "/resources/bicycle.png",
       id: 1,
       latitude: 28.720034,
       longitude: 115.830064,
-      width: 30,
-      height: 30
+      width: 20,
+      height: 20
     }],
     motto: 'Hello World',
     userInfo: {},
