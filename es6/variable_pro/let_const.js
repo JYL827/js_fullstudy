@@ -40,3 +40,9 @@
 // }
 
 
+// if(true) {
+//     console.log(age)
+//     const age = 18
+
+// }
+
