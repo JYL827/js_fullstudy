@@ -7,13 +7,22 @@
       助 力 车 自 动 关 闭
     </view>
   </view>
+  <view class="worning">
+      <text>规范骑行，安全常在！</text>
+  </view>
   <view class="fuc">
-    <view class="fuc-up">
+    <view class="fuc-findbike">
       <image class="lightning" src="/resources/lightning.png" />
     </view>
-    <view class="fuc-down">
+    <view class="fuc-stopbike">
        p
     </view>
+  </view>
+  <view class="location">
+    <image src="../../resources/location.png" />  
+  </view>
+  <view class="repair">
+    <image src="../../resources/repair.png" />  
   </view>
   <view class="ride">
       <image class="scan" src="/resources/scan.png" />

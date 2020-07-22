@@ -3,82 +3,123 @@
   padding: 0;
 }
 .tips {
-  width: 350px;
-  height: 50px;
+  width: 700rpx;
+  height: 100rpx;
   position: absolute;
   text-align: center;
   z-index: 1;
   background-color: #fff;
-  border-radius: 12px;
-  margin-top: 20px;
+  border-radius: 24rpx;
+  top: 40rpx;
 }
 .tip1 {
-  font-size: 13px;
+  font-size: 26rpx;
   position: absolute;
   display: inline-block;
-  left: 60px;
-  top: 15px;
+  left: 120rpx;
+  top: 30rpx;
 }
 .tip2 {
-  font-size: 13px;
+  font-size: 26rpx;
   position: absolute;
   display: inline-block;
-  top: 15px;
+  top: 30rpx;
   color: orange;
 }
+.worning {
+  width: 700rpx;
+  height: 70rpx;
+  box-sizing: border-box;
+  padding: 14rpx 90rpx;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 24rpx;
+  top: 900rpx;
+  font-size: 28rpx;
+  color: #6f7071;
+}
+
 .fuc {
-  width: 40px;
-  height: 100px;
+  width: 80rpx;
+  height: 200rpx;
   position: absolute;
   right: 36rpx;
   top: 400rpx;
   z-index: 1;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20rpx;
 }
-.fuc-up {
-  height: 45px;
+.fuc-findbike {
+  height: 90rpx;
   position: absolute;
-  top: 8px;
-  right: 5px;
+  top: 16rpx;
+  right: 10px;
   border-bottom: 4rpx solid #f2f2f2 ;
 }
 .lightning {
-  width: 30px;
-  height: 35px;
+  width: 60rpx;
+  height: 70rpx;
 }
-.fuc-down {
-  height: 50px;
-  font-size: 30px;
+.fuc-stopbike {
+  height: 100rpx;
+  font-size: 60rpx;
   color: #a2a2a2;
   position: absolute;
-  top: 55px;
-  right: 10px;
+  top: 105rpx;
+  right: 20rpx;
 }
 .ride {
   position: absolute;
   background-color: #26292f;
   color: #fff;
-  font-size: 20px;
+  font-size: 40rpx;
   height: 113.9rpx;
   width: 707rpx;
   bottom: 106.9rpx;
   text-align: center;
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 20rpx;
 }
 .scan {
   position: absolute;
   width: 60rpx;
   height: 60rpx;
   display: inline-block;
-  left: 100px;
-  top: 15px;
+  left: 200rpx;
+  top: 30rpx;
 }
 .rental {
   position: absolute;
   height: 60rpx;
   display: inline-block;
-  left: 145px;
-  top: 15px;
+  left: 290rpx;
+  top: 30rpx;
+}
+.location {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  top: 700rpx;
+  right: 36rpx;
+  background-color: #fff;
+  z-index: 1;
+}
+.location image,
+.repair image {
+  width: 52rpx;
+  height: 52rpx;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+.repair {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  top: 810rpx;
+  right: 36rpx;
+  background-color: #fff;
+  z-index: 1;
 }

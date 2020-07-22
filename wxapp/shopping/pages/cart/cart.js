@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    carts:[
+      { id: 1, title: '新鲜芹菜 半斤', image: '/image/s5.png', num: 4, price: 0.01, selected: true },
+      { id: 2, title: '素米 500g', image: '/image/s6.png', num: 1, price: 0.03, selected: true }
+    ],
+    totalPrice: 0
   },
 
   /**
@@ -26,7 +30,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    setTimeout(() => {
+      this.setData ()
+    },1000)
   },
 
   /**
