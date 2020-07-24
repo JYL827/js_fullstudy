@@ -6,7 +6,7 @@ Page({
    */
   data: {
     totalPrice: 0,
-    selectAllStatus: true
+    selectAllStatus: true,
   },
 
   selectAll(){
@@ -15,14 +15,16 @@ Page({
     selectAllStatus = !selectAllStatus
     // 把carts数组里面的每一条数据里面的selected改成false
     let carts = this.data.carts
-    for(let i = 0; i < carts.length; i++) {
-      carts[i].selected = selectAllStatus
+    if(carts.length){
+      for(let i = 0; i < carts.length; i++) {
+        carts[i].selected = selectAllStatus
+      }
+      this.setData({
+        selectAllStatus:selectAllStatus,
+        carts: carts
+        
+      })
     }
-    this.setData({
-      selectAllStatus:selectAllStatus,
-      carts: carts
-      
-    })
     this.getTotalPrice()
   },
   selectList(e){
@@ -61,6 +63,47 @@ Page({
     this.setData({
       totalPrice: total.toFixed(2)
     })
+  },
+  // 设置商品数量加减和删除
+  decrease(e){
+    let index = e.currentTarget.dataset.index
+    // console.log(index)
+    let carts = this.data.carts
+    // console.log(carts)
+    if(carts[index].num-1){
+      carts[index].num--
+    }
+    this.setData({
+      carts: carts
+    })
+    this.getTotalPrice()
+  },
+  increase(e){
+    let index = e.currentTarget.dataset.index
+    // console.log(index)
+    let carts = this.data.carts
+    // console.log(carts) 
+      carts[index].num++
+    this.setData({
+      carts: carts
+    }) 
+    this.getTotalPrice()
+  },
+  delete(e){
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    carts.splice(index,1)
+    console.log(carts.length)
+    this.setData({
+      carts: carts
+    })
+    if(carts.length == 0){
+
+      this.setData({
+        selectAllStatus: false
+      })
+    }
+    this.getTotalPrice()
   },
   /**
    * 生命周期函数--监听页面加载

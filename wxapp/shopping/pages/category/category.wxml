@@ -1,54 +1,39 @@
-<!-- 总容器 -->
-<view class="main">
-	<!-- 左侧导航 -->
-	<view class="left-category">
+<view class="wrapper">
 
-		<scroll-view class="category-scroll" scroll-y>
+  <view class="kind" style="width: 20%;">
+    <block wx:for="{{category}}" wx:key="{{index}}">
+      <view class="kind-title" id="{{item.id}}" bindtap="changeMenu">
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
 
-			<block wx:for="{{category}}" wx:key="index">
-				<view
-				 bindtap="scroll"
-				 data-id="{{item.id}}"
-				 class="category-scroll-cate"
-				>{{item.name}}
-				</view>
-			</block>
+  <scroll-view class="scroll" scroll-into-view="{{getId}}" scroll-y="true" style="height: 100vh; width: 80%;" scroll-with-animation="true">
+    <block wx:for="{{detail}}" wx:key="{{index}}">
+      <view style="height: 100vh;"  id="{{item.id}}" >
+        <view class="scroll-img">
+          <image src="{{item.banner}}"></image>
+        </view>
 
-		</scroll-view>
+        <view class="scroll-title">
+          <text>{{item.cate}}</text>
+        </view>
 
-	</view>
-	<!-- 右侧详情 -->
-	<view class="right-detail">
-		<scroll-view
-		 scroll-y
-		 class="detail-content"
-		 scroll-into-view="{{intoindaex}}"
-		 scroll-with-animation
-		>
-			<!-- 外层循环 -->
-			<block wx:for="{{detail}}" wx:key="index">
 
-				<view class="detail-content__page" id="{{item.id}}">
-					<image class="page-image" src="{{item.banner}}" />
+        <block wx:for="{{item.detail}}" wx:key="{{index}}" wx:for-item="det">
+          <view class="content">
+            <view class="content-img">
+              <image src="{{det.thumb}}"></image>
+            </view>
+            <view class="content-name">
+              <text>{{det.name}}</text>
+            </view>
+          </view>
+        </block>
 
-					<view class="page-title">
-						<text>{{item.cate}}</text>
-					</view>
-					<!-- 内层循环 -->
-					<block
-					 wx:for="{{item.detail}}"
-					 wx:key="index"
-					 wx:for-item="detail"
-					>
-						<view class="page-detail">
-							<image class="detail-img" src="{{detail.thumb}}" />
-							<view>
-								<text>{{detail.name}}</text>
-							</view>
-						</view>
-					</block>
-				</view>
-			</block>
-		</scroll-view>
-	</view>
+
+      </view>
+    </block>
+
+  </scroll-view>
 </view>
