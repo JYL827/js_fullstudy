@@ -36,3 +36,36 @@
   width: 100%;
   height: 100%;
 }
+.trolley {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.weui-media-box {
+  background-color: #fff;
+  
+}
+.my {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+.weui-media-box__thumb {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.weui-cell__bd {
+  display: flex;
+}
+.user-page__info {
+  flex: 1;
+}
+.user-page__detail {
+ float: right;
+}
