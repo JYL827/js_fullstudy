@@ -1,0 +1,11 @@
+<!--component/nav-bar/nav-bar.wxml-->
+<view>
+    <view style=""></view>
+    <view class="container">
+        <view style="{{statusBarstyle}}"></view>
+        <view class="nav-bar" style="{{navBarStyle}}">
+            {{title}}
+        </view>
+    </view>
+</view>
+  

@@ -33,7 +33,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
 	"appid": "wx5f6c1226a34e4f76",
-	"projectname": "shopping",
+	"projectname": "doubanmovie",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
