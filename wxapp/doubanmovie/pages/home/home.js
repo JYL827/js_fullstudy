@@ -12,9 +12,55 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCity((city) => {
+      this.loadData(0,{city:city, apikey:'0df993c66c0c636e29ecbb5344252a4a'})
+    })
   },
-
+  loadData(idx, params){
+    let url = wx.db.url('/v2/movie/in_theaters')
+    wx.request({
+      url: url,
+      data: params,
+      header: {'content-type': 'json'},
+      success: (res) => {
+        console.log(res)
+      }
+    })
+  },
+  getCity(succeed){
+    // 拿到当前所在的城市名称
+    // 先拿到当前所在区域的经纬度(小程序自带API)
+    wx.getLocation({
+      success: function(res){
+        // console.log(res)
+        // 将经纬度转换成具体的名称
+        wx.request({
+          url: 'https://api.map.baidu.com/reverse_geocoding/v3',
+          data: {
+            ak: 'AgstQBQMuypsnELAm0YdNXfSjdHC9Xld',
+            output: 'json',
+            coordtype: 'wgs84ll',
+            location: `${res.latitude},${res.longitude}`
+          }, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          // header: {}, // 设置请求的 header
+          success: function(res){
+            // console.log(res)
+            let city = res.data.result.addressComponent.city
+            succeed && succeed(city)
+          },
+          fail: function() {
+            console.log('获取地理位置失败')
+          },
+          complete: function() {
+            // complete
+          }
+        })
+      },
+      fail: function() {
+        // fail
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

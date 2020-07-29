@@ -1,0 +1,12 @@
+<!--component/movieItem/movieItem.wxml-->
+<view class="item">
+    <view class="info">
+        <image class="img" src="http://img.wmtp.net/wp-content/uploads/2020/02/2-6.jpg"></image>
+        <view class="name">第一次的离别</view>
+        <view class="score-wrapper">
+            <!-- 星星 -->
+            <ratingStar></ratingStar>
+            <view class="score">9.0</view>
+        </view>
+    </view>
+</view>

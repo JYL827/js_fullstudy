@@ -4,31 +4,37 @@
     "pages/rank/rank",
     "pages/profile/profile"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "weixin",
+    "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black",
-    "navigationStyle":"custom"
+    "navigationStyle": "custom"
   },
   "tabBar":{
-    "list": [{
-        "pagePath":"pages/home/home",
-        "text":"首页",
-        "iconPath":"/assets/img/ic_tab_home_normal.png",
-        "selectedIconPath":"/assets/img/ic_tab_home_active.png"
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/img/ic_tab_home_normal.png",
+        "selectedIconPath": "/assets/img/ic_tab_home_active.png"
       },
       {
-        "pagePath":"pages/rank/rank",
-        "text":"榜单",
-        "iconPath":"/assets/img/ic_tab_subject_normal.png",
-        "selectedIconPath":"/assets/img/ic_tab_subject_active.png"
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/assets/img/ic_tab_subject_normal.png",
+        "selectedIconPath": "/assets/img/ic_tab_subject_active.png"
       },
       {
-        "pagePath":"pages/profile/profile",
-        "text":"我的",
-        "iconPath":"/assets/img/ic_tab_profile_normal.png",
-        "selectedIconPath":"/assets/img/ic_tab_profile_active.png"
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/img/ic_tab_profile_normal.png",
+        "selectedIconPath": "/assets/img/ic_tab_profile_active.png"
       }
     ]
   },

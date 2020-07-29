@@ -26,16 +26,25 @@ Component({
    * 组件的初始数据
    */
   data: {
-    statusBarstyle:"",
-    navBarStyle:""
+    statusBarStyle: "",
+    navBarStyle: "",
+    topHeight: 0
   },
 
   lifetimes: {
-    attached: function(){
-      let navBarStyle = `background-color:${this.data.navBarColor};height:65px;color:${this.data.titleColor}`
+    attached: function() {
+      let navBarStyle = `background-color:${this.data.navBarColor};
+      height:${wx.db.navBarHeight}px;color:${this.data.titleColor}`
+
+      let statusBarStyle = `background-color:${this.data.statusBarColor};
+      height:${wx.db.statusBarHeight}px;`
+
+      let topHeight = wx.db.navBarHeight + wx.db.statusBarHeight
 
       this.setData({
-        navBarStyle
+        navBarStyle,
+        statusBarStyle,
+        topHeight
       })
     }
   },
