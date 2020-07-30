@@ -1,25 +1,38 @@
 /* component/movieItem/movieItem.wxss */
-.item {
-    display: inline-flex;
+.item{
+  display: inline-flex;
 }
-.item .info {
-    display: flex;
-    flex-direction: column;
+.item .info{
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+
 }
-.name {
-    font-size: 32rpx;
-    font-weight: bold;
-    max-width: 200rpx;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.name{
+  padding: 0 5rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  max-width: 170rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.img {
-    width: 201rpx;
-    height: 301rpx;
-    margin-bottom: 10rpx;
-    border-radius: 10rpx;
+.img{
+width: 180rpx;
+height: 250rpx;
+margin-bottom: 20rpx;
+border-radius: 10rpx;
 }
 .score-wrapper{
-    display: flex;
+  padding: 0 5rpx;
+  height: 37rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: rgb(100, 97, 97);
+  align-items: center;
 }
+
+
+
+

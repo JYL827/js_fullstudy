@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "ratingStar": "/component/ratingStar/ratingStar"
+    "ratingStar":"/component/ratingStar/ratingStar"
   }
 }
