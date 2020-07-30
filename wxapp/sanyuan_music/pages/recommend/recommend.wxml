@@ -1,0 +1,12 @@
+<!--pages/recommend/recommend.wxml-->
+<nav-bar></nav-bar>
+<scroll-view class="" scroll-x="true">
+    <swiper class="" indicator-dots="true" indicator-color="red" autoplay="true" interval="3000">
+        <swiper-item class="" item-id="">
+            
+        </swiper-item>
+          
+    </swiper>
+      
+</scroll-view>
+  

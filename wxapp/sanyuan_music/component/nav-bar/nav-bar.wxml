@@ -1,0 +1,15 @@
+<!--component/nav-bar/nav-bar.wxml-->
+<view>
+  <!-- 弥补nav-bar的高度 -->
+  <view class="container">
+    <view style="width:100%; height:60rpx; background-color:red"></view>
+    <view class="title" style="width:100%; height:45rpx; background-color:red">
+        <p>云音悦</p>
+    </view>
+    <view class="nav-bar">
+        <image src="/plugin/menu.png" class="menu-pic"/>
+        <image class="search-pic" src="/plugin/search.png"/>   
+    </view>
+  </view>
+</view>
+  

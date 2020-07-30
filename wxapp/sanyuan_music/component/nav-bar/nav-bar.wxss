@@ -1,0 +1,27 @@
+/* component/nav-bar/nav-bar.wxss */
+.container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.title {
+    color: #fff;
+    text-align: center;
+}
+.nav-bar {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: red;
+}
+.menu-pic {
+    width: 40rpx;
+    height: 45rpx;
+}
+.search-pic {
+    width: 45rpx;
+    height: 45rpx;
+}
