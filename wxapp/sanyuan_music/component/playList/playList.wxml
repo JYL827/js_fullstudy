@@ -1,0 +1,14 @@
+<!-- component/playList/playList.wxml -->
+<view class="list">
+    <view class="list-bg">
+        <view class="decorate">
+            <view class="icon-play">
+                <image src="/plugin/listen.png" style="width:100%; height:100%" />
+            </view>
+            <view class="count">24万</view>
+        </view>
+    </view>
+    <view class="desc">
+        <text>〔吉他与猫〕当夕阳的余晖落在琴弦上</text>
+    </view>
+</view>

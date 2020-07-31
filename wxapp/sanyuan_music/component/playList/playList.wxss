@@ -1,0 +1,39 @@
+/* component/playList/playList.wxss */
+.playLists {
+    display: flex;
+    padding: 0 10rpx;
+    justify-content: space-between;
+}
+.list-bg {
+    width:240rpx; 
+    height:240rpx;
+}
+.decorate {
+    width: 240rpx;
+    height: 70rpx;
+    position: relative;
+}
+.icon-play {
+    position: absolute;
+    width:25rpx;
+    height:25rpx;
+    display: inline-block;
+    right: 65rpx;
+}
+.count {
+    position: absolute;
+    width:55rpx;
+    height:32rpx;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    top: 5rpx;
+    right: 0;
+    margin-left: 10rpx;
+}
+.desc {
+    width: 240rpx;
+    height: 100rpx;
+    font-size: 12px;
+
+}
