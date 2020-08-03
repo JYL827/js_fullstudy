@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#09ba07",
+    "navigationBarTitleText": "小试牛刀",
+    "navigationBarTextStyle": "white",
+    "backgroundColor":"#fbf9fe"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
