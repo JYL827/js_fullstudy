@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        // var b;
+        // console.log(b)    // 变量声明提升
+        // b = 123
+
+        // function test() {   // 函数声明整体提升
+        //     var a = 1111
+        //     console.log('hello', a)
+        // }
+        // test()
+
+        
+    </script>
+    <script>
+        // AO: {
+        //     a: 
+                // 预编译开始 
+                // undefined ==> 1 ==> function a() {} 
+                //编译开始
+                //==> 123,
+        //     b: 
+                // 预编译开始
+                // undefined 
+                // 编译开始
+                //==> function () {},
+        //     d: 
+                // 预编译开始
+                // undefined ==> function d() {}
+                // 编译开始
+                // ==> 123,
+        // }
+
+        // function fn(a) {
+        //     console.log(a) // function a() {}
+        //     var a = 123
+        //     console.log(a) // 123
+        //     function a() {}
+        //     console.log(a) // 123
+        //     var b = function() {}
+        //     console.log(b) // function() {}
+        //     function d() {}
+        //     var d = a
+        //     console.log(d) // 123
+        // }
+        // fn(1)
+    </script> -->
+    <script>
+        // GO: {
+        //     global: undefined function fn() {...} 100,
+        // }
+        global = 100
+        function fn() {
+            console.log(global)
+            global = 200
+            console.log(global)
+            global = 300
+            var global
+        }
+        fn()
+        var global;
+
+    </script>
+</body>
+</html>
