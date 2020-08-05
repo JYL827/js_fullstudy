@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .image-item {
+        display: block;
+        margin-bottom: 50px;
+        height: 200px;
+    }
+</style>
+<body>
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2944546656,1446591539&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1450648609,3010291424&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2957464670,3369162983&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1104784159,507505398&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=372455608,2445346951&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=638110035,1103181700&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1733475918,2385390143&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1876588314,1433334775&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4086174253,2192639088&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=574931137,649839135&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=123100491,2444077996&fm=26&gp=0.jpg" alt="">
+    <img class="image-item" src="" lazyload="true" data-original="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3456519295,3699433014&fm=26&gp=0.jpg" alt="">
+    <script>
+        // 可视区域的高度
+        let viewHeight = document.documentElement.clientHeight
+
+        function lazyLoad() {
+            let eles = document.querySelectorAll('img[data-original][lazyload]')
+            // console.log(eles)
+            // 判断每一个img是否出现在可视区域内
+            /* Array.from(eles).forEach((item) => {
+                console.log(item)
+            }); */
+            Array.prototype.forEach.call(eles, function(item, index) {
+                console.log(item)
+                let rect;
+                rect = item.getBoundingClientRect() // 用于获取页面上某个元素的左上右下分别相对于浏览器视窗的位置
+                console.log(rect)
+                if(rect.bottom >= 0 && rect.top < viewHeight) { // 在可视区域内
+                    !function() {
+                        let img = new Image()
+                        img.src = item.dataset.original
+                        img.onload = function() {
+                            item.src = img.src
+                            // console.log(item.src)
+                        }
+                        item.removeAttribute('data-original')
+                        item.removeAttribute('lazyload')
+                    }()
+                }
+            })
+        }
+        lazyLoad()
+        document.addEventListener("scroll", lazyLoad)
+    </script>
+</body>
+</html>
