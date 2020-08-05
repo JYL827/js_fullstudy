@@ -1,0 +1,12 @@
+<!--component/searchBar/searchbar.wxml-->
+<view class="searchbar">
+    <view class="icon">
+        <image class="" src="../../plugin/search.png"/>
+          
+    </view>
+    <view class="title">雪中悍刀行</view>
+    <view class="bookStore">
+        <text>书城</text>
+    </view>
+</view>
+  

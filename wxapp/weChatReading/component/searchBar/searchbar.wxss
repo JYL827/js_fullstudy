@@ -1,0 +1,21 @@
+/* component/searchBar/searchbar.wxss */
+.searchbar {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 15rpx;
+    padding: 0 10rpx;
+    width: 96vw;
+    height: 60rpx;
+    border-radius: 15px;
+    background-color: #f6f6f6;
+    color: #8a8a8a;
+}
+.icon {
+    width: 60rpx;
+    height: 60rpx;
+}
+.icon image {
+    width: 100%;
+    height: 100%;
+}

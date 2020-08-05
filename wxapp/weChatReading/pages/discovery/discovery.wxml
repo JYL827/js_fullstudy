@@ -1,0 +1,4 @@
+<!--pages/discover/discovery.wxml-->
+<view class="wrapper">
+    <searchbar></searchbar>
+</view>

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/discovery/discovery",
+    "pages/bookshelf/bookshelf",
+    "pages/have-a-look/have-a-look",
+    "pages/personal-info/personal-info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信读书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "text": "发现",
+        "pagePath": "pages/discovery/discovery",
+        "iconPath": "plugin/discovery.png",
+        "selectedIconPath": "plugin/discoverySelect.png"
+      },
+      {
+        "text": "书架",
+        "pagePath": "pages/bookshelf/bookshelf",
+        "iconPath": "plugin/bookshelf.png",
+        "selectedIconPath": "plugin/bookshelfSelect.png"
+      },
+      {
+        "text": "看一看",
+        "pagePath": "pages/have-a-look/have-a-look",
+        "iconPath": "plugin/look.png",
+        "selectedIconPath": "plugin/lookSelect.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/personal-info/personal-info",
+        "iconPath": "plugin/personal.png",
+        "selectedIconPath": "plugin/personalSelect.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
