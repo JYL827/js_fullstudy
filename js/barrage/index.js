@@ -1,10 +1,10 @@
 let data = [
-    { value: '听妈妈的话，我听了10年！', time: 5, color: 'red', speed: 1, fontSize: 22 },
-    { value: '牛逼啊，蜗牛！', time: 6, color: '#00a1f5', speed: 1, fontSize: 22 },
-    { value: '周董十年老粉不请自来！', time: 5, color: 'red', speed: 1, fontSize: 30 },
+    { value: '听妈妈的话，我听了10年！', time: 5, color: 'red', speed: 3, fontSize: 22 },
+    { value: '牛逼啊，蜗牛！', time: 6, color: '#00a1f5', speed: 1, fontSize: 40 },
+    { value: '周董十年老粉不请自来！', time: 3, color: 'red', speed: 2, fontSize: 30 },
     { value: '听妈妈的话，别让她受伤！', time: 5 },
-    { value: '快点长大吧！', time: 8, color: '#11wd5f', speed: 1, fontSize: 22 },
-    { value: '十四年啦！', time: 7, color: 'blue', speed: 1, fontSize: 20 },
+    { value: '快点长大吧！', time: 8, color: '#11wd5f', speed: 2, fontSize: 22 },
+    { value: '十四年啦！', time: 7, color: 'blue', speed: 2, fontSize: 20 },
 ]
 
 // 获取所有需要的dom元素
@@ -27,7 +27,7 @@ class CanvasBarrage {
         this.canvas = canvas
         // 设置canvas的宽高和video一致
         this.canvas.width = video.width
-        this.canvas.height = video.width
+        this.canvas.height = video.height
 
         // 获取画布，操作画布
         this.ctx = canvas.getContext('2d')
@@ -47,6 +47,54 @@ class CanvasBarrage {
         this.isPaused = true
         // 得到所有的弹幕消息
         this.barrages = this.data.map(item => new Barrage(item, this))
+        // 渲染
+        this.render()
+    }
+    // 渲染canvas绘制的弹幕
+    render() {
+        // 渲染的第一步，清除原来的画布
+        this.clear()
+        // 渲染弹幕
+        this.renderBarrage()
+        if (this.isPaused === false) {
+            // 递归进行渲染 
+            requestAnimationFrame(this.render.bind(this))
+        }
+    }
+    clear() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    }
+    renderBarrage() {
+        // 首先拿到当前视频播放的时间
+        // 要根据该时间和弹幕要展示的时间做对比，来判断是否要展示弹幕
+        let time = this.video.currentTime
+
+        // 遍历所有的弹幕，每一个barrage都是barrage的实例
+        this.barrages.forEach(barrage => {
+            // 用一个flag来处理是否默认渲染，默认是false
+            // 并且只有在视频播放时间大于等于当前弹幕的展示时间时，才处理
+            if (!barrage.flag && time >= barrage.time) {
+                // 判断当前这条弹幕是否被初始化过了
+                // 如果isInit是false，那么需要对当前的弹幕进行初始化的操作
+                if (!barrage.isInit) {
+                    barrage.init()
+                    barrage.isInit = true
+                }
+
+                // 弹幕要从右往左渲染，所以x坐标减去当前的弹幕的speed即可
+                barrage.x -= barrage.speed
+                barrage.render()
+
+                // 如果当前弹幕的x坐标比自身的宽度负值还要小，就表示出去屏幕了
+                if (barrage.x < -barrage.width) {
+                    barrage.flag = true // 把flag设置成true下次就不会渲染了
+                }
+            }
+        });
+    }
+    add(obj) {
+        // 实际上就是往barrages里添加一项Barrage实例
+        this.barrages.push(new Barrage(obj, this))
     }
 }
 
@@ -90,7 +138,42 @@ class Barrage {
             this.y = this.context.canvas.height - this.fontSize
         }
     }
+
+    // 渲染每一条弹幕
+    render() {
+        // 设置画布文字的字体和字号
+        this.context.ctx.font = `${this.fontSize}px Arial`
+        // 设置一下画布颜色
+        this.context.ctx.fillStyle = this.color;
+        // 绘制文字
+        this.context.ctx.fillText(this.value, this.x, this.y)
+    }
 }
 
 // 创建canvasBarrage的实例
-let CanvasBarrage = new CanvasBarrage(canvas, video, data)
+let canvasBarrage = new CanvasBarrage(canvas, video, { data })
+video.addEventListener('play', () => {
+    canvasBarrage.isPaused = false
+    canvasBarrage.render()
+})
+
+// 发送弹幕的方法
+function send() {
+    let value = $text.value // 获取输入的内容
+    let time = video.currentTime // 当前视频时间
+    let color = $color.value
+    let fontSize = $range.value
+    let obj = { value, time, color, fontSize }
+
+    // 添加弹幕数据
+    canvasBarrage.add(obj)
+    $text.value = ""
+}
+
+$btn.addEventListener('click', send)
+// 回车发送弹幕
+$text.addEventListener('keyup', e => {
+    // console.log(e)
+    let key = e.keyCode
+    key === 13 && send()
+  })
