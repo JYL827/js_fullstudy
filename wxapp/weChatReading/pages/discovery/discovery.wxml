@@ -1,4 +1,5 @@
 <!--pages/discover/discovery.wxml-->
 <view class="wrapper">
-    <searchbar></searchbar>
+    <searchbar title= "{{hot}}"></searchbar>
+    <book-recommend></book-recommend>
 </view>

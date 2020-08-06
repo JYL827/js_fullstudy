@@ -27,12 +27,12 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wx5f6c1226a34e4f76",
+	"appid": "wx6719d19d9e598fbd",
 	"projectname": "weChatReading",
 	"debugOptions": {
 		"hidedInDevtools": []

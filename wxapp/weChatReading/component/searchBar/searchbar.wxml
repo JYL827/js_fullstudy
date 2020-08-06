@@ -1,12 +1,11 @@
 <!--component/searchBar/searchbar.wxml-->
 <view class="searchbar">
-    <view class="icon">
-        <image class="" src="../../plugin/search.png"/>
-          
+    <view class="icon" bindtap= "search">
+        <image src="../../plugin/search.png"/>
     </view>
-    <view class="title">雪中悍刀行</view>
-    <view class="bookStore">
-        <text>书城</text>
+    <view class="title">{{showTitle}}</view>
+    <view class="bookStore" bindtap = "newPage">
+        <text>{{anotherPage}}</text>
     </view>
 </view>
   

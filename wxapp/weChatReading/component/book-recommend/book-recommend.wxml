@@ -1,0 +1,16 @@
+<!--component/book-recommend/book-recommend.wxml-->
+<view class="book">
+    <view class="book__cover">
+        <image src="{{url}}"/>
+    </view>
+    <view class="book__name">{{name}}</view>
+    <view class="book__writer">{{writer}}</view>
+    <view class="evaluate">
+        <view class="score">{{score}}分</view>
+        <view class="reader">{{reader}}人今日在读</view>
+    </view>
+    <view class="friend-reader">
+        {{friendReader}}位朋友在读
+        <view class="triangle"></view>
+    </view>
+</view>
