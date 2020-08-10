@@ -1,7 +1,7 @@
 <view class="item">
 	<view class="info">
 
-		<image class="img" src="		{{movie.images.large}}"></image>
+		<image class="img" src="{{movie.images.large}}"></image>
 		<view class="name">{{movie.title}}</view>
 		<view class="score-wrapper">
 			<!-- 星星组件 -->
