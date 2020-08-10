@@ -92,5 +92,5 @@ var obj = {
     foo: foo
 }
 var a = 'hello'
-var bar = obj.foo();
-console.log(bar)
+var bar = obj.foo;
+bar()
