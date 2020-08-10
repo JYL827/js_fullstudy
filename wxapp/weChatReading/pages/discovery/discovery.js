@@ -11,6 +11,32 @@ Page({
       { name: '云边有个小卖部'},
       { name: '阿耐职场四部曲'},
       { name: '黎巴嫩首都发生爆炸' }
+    ],
+    book: [
+      {
+        url:'https://wfqqreader-1252317822.image.myqcloud.com/cover/995/822995/t6_822995.jpg',
+        name: '明朝那些事',
+        writer: '当年明月',
+        score: 9.0,
+        reader: 1800,
+        friendReader: 3
+      },
+      {
+        url:'https://wfqqreader-1252317822.image.myqcloud.com/cover/457/22946457/t6_22946457.jpg',
+        name: '围城',
+        writer: '钱钟书',
+        score: 9.0,
+        reader: 1870,
+        friendReader: 1
+      },
+      {
+        url:'https://wfqqreader-1252317822.image.myqcloud.com/cover/865/172865/t6_172865.jpg',
+        name: '明朝那些事',
+        writer: '当年明月',
+        score: 8.9,
+        reader: 18741,
+        friendReader: 10
+      }
     ]
   },
 
