@@ -31,7 +31,7 @@ Page({
       },
       {
         url:'https://wfqqreader-1252317822.image.myqcloud.com/cover/865/172865/t6_172865.jpg',
-        name: '明朝那些事',
+        name: '雪中悍刀行',
         writer: '当年明月',
         score: 8.9,
         reader: 18741,
