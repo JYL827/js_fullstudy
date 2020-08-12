@@ -9,7 +9,7 @@ function foo (a) {
 
 foo(1)
 
-console.log(a,b,c)
+console.log(a,b,c) //报错
 
 // foo的作用域具备a, b, c, bar这些标识符
 // foo外部是访问不到这些标识符的

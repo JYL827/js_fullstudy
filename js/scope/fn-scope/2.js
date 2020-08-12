@@ -8,8 +8,8 @@
 //         return a - 1
 //     }
 
-//     b = a + bar(a * 2)
-//     console.log(b * 3)
+//     b = a + bar(a * 2) // 2 + 2 * 2 -1 = 5
+//     console.log(b * 3) // 5 * 3 = 15
 // }
 
 // foo(2)
