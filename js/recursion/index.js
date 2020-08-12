@@ -1,3 +1,4 @@
+// 递归
 // function mul(n) {
 //     // n的阶乘
 //     // var num = 1
