@@ -20,6 +20,9 @@
   title="创建一个群组"
   show="{{ newGroupModal }}"
   showCancelButton
+  bind:cancel="closeDialog"
+  bind:confirm="createGroup"
+  z-index="1"
 >
   <view class="group-dialog-body">
     <van-field
@@ -30,3 +33,5 @@
     />
   </view>
 </van-dialog>
+<!-- 提示 -->
+<van-notify id="notify-selector"/>

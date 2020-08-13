@@ -1,1 +1,19 @@
 /* miniprogram/pages/group/group.wxss */
+.container {
+    margin: 40rpx;
+    padding: 0 10rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0px 7px 20px #ececec;
+}
+.title {
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.title image {
+    width: 45rpx;
+    height: 45rpx;
+    padding-right: 10rpx;
+}

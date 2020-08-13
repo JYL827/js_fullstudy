@@ -1,0 +1,8 @@
+<!-- components/group/group.wxml -->
+<view class="group">
+    <view class="name">{{group.name}}</view>
+    <view class="user">
+        <image src="../../images/8.jpg"/>
+        <van-icon name="arrow" />
+    </view>
+</view>
