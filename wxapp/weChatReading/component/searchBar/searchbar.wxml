@@ -4,8 +4,8 @@
         <image src="../../plugin/search.png"/>
     </view>
     <view class="title">{{showTitle}}</view>
-    <view class="bookStore" bindtap = "newPage">
+    <view class="bookStore">
         <text>{{anotherPage}}</text>
     </view>
 </view>
-  
+

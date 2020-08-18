@@ -1,2 +1,16 @@
-<!--pages/bookshelf/bookshelf.wxml-->
-<text>pages/bookshelf/bookshelf.wxml</text>
+<!-- 书架界面 -->
+<view class="bookshelf">
+    <searchbar title="{{hot}}" anotherPage="编辑"></searchbar>
+    <!-- 扫描其他设备以及分类显示 -->
+    <view class="head">
+        <view class="scan">
+            <image id="pic" src="../../plugin/scan.png" />
+            其他设备
+        </view>
+        <view class="classify">
+            <image id="pic" src="../../plugin/classify.png" />
+            分类显示
+        </view>
+    </view>
+    <booklist book="{{book}}" count="{{count}}"></booklist>
+</view>

@@ -1,0 +1,13 @@
+<!-- 添加至书架的书籍 -->
+<view class="bookList">
+    <view class="book" wx:for="{{book}}" wx:key="index">
+        <image src="{{item.url}}" />
+        <view class="book__name">
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <view class="add">
+        <image src="/plugin/add.png"/>
+    </view>
+    <view class="open">{{count}}本公开阅读</view>
+</view>

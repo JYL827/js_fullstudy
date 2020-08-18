@@ -1,7 +1,7 @@
 <!--pages/discover/discovery.wxml-->
 <view class="wrapper">
     <searchbar title= "{{hot}}"></searchbar>
-    <scroll-view class="scroll-view__book" scroll-y="true" >
+    <scroll-view class="scroll-view__book" scroll-y="true">
         <book-recommend wx:for="{{book}}"wx:key="index" book="{{item}}"></book-recommend>
     </scroll-view>
 </view>
