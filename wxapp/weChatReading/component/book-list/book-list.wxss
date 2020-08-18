@@ -30,6 +30,7 @@
     top: 50%;
 }
 .open {
+    margin-top: 60rpx;
     text-align: center;
     color: #858585;
 }
