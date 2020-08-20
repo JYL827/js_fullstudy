@@ -1,2 +1,79 @@
-<!--pages/personal-info/personal-info.wxml-->
-<text>pages/personal-info/personal-info.wxml</text>
+<!-- pages/personal-info/personal-info.wxml -->
+<view class="wrapper">
+    <view class="top">
+        <image src="/plugin/envelope.png" />
+        <image src="/plugin/set.png" />
+    </view>
+    <view class="head">
+        <view class="head__info">
+            <view class="pic">
+                <image src="/plugin/head_pic.jpg" />
+            </view>
+            <view class="head__name">羽</view>
+            <view class="edit">编辑个人资料</view>
+        </view>
+    </view>
+    <!-- 账户详细信息 -->
+    <view class="body">
+        <view class="part">
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/account.png" />
+                    账户
+                </view>
+                <view class="detail">
+                    <view class="balance">3.00</view>
+                    <view class="desc">已购3本书</view>
+                </view>
+            </view>
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/infinite.png" />
+                    无限卡 · 免费卡
+                </view>
+                <view class="detail">今日到期</view>
+            </view>
+        </view>
+        <view class="part">
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/rank.png" />
+                    读书排行榜
+                </view>
+                <view class="detail">
+                    <view class="balance">第 1 名</view>
+                    <view class="desc">1 分钟</view>
+                </view>
+            </view>
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/attention.png" />
+                    关注
+                </view>
+                <view class="detail">
+                    <view class="balance">0 人关注我</view>
+                    <view class="desc">46位微信朋友正在阅读</view>
+                </view>
+            </view>
+        </view>
+        <view class="part">
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/note.png" />
+                    笔记、读过和赞过
+                </view>
+                <view class="detail">
+                    <view class="balance">10 个</view>
+                    <view class="desc">赞过0次</view>
+                </view>
+            </view>
+            <view class="form">
+                <view class="title">
+                    <image src="/plugin/booklist.png" />
+                    书单
+                </view>
+                <view class="detail">1 个</view>
+            </view>
+        </view>
+    </view>
+</view>
