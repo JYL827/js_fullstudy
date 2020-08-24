@@ -7,7 +7,14 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
     <title>Document</title>
 </head>
-
+    <style>
+        .red{
+            color:red
+        }
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 <body>
     <div id="app">
         <!-- <div v-show="isSure">我叫山鸡，jb的鸡</div>
@@ -20,27 +27,49 @@
             <span v-text="message"></span><br/>
             <span v-html="newMessage"></span>
         </div> -->
-        <div class="count">
+        <!-- <div class="count">
             <p>{{count}}</p>
             <button v-on:click="add">+</button>
             <button @click="reduce">-</button>
-        </div>
+        </div> -->
+
+        <!-- <div class="model">
+            <p>{{message}}</p>
+            <p>
+                v-model:
+                <input type="text" v-model="message"/>
+            </p>
+        </div> -->
+        <!-- <div class="pic">
+            <img :src="imageSrc" alt="">
+        </div> -->
+
+        <!-- <div @click="changeColor" v-bind:class="{red: isRed}" :class="[className1, className2]">明国很腼腆</div> -->
+
+        <!-- <div v-cloak>{{message}}</div> -->
+
+        <div v-once>{{message}}</div>
+        <input type="text" v-model="message" />
     </div>
 
     <script>
         var app = new Vue({
             el: '#app',
             data: {
+                className1:'active',
+                className2:'wrapper',
                 message: 'Hello world',
                 newMessage:'<h2>Hello world</h2>',
                 isSure: false,
+                imageSrc:'https://picb.zhimg.com/80/v2-1852d9baf8b19ab51894d8dc2aa007d5_720w.jpg',
                 count:0,
                 list: ['a', 'b', 'c', 'd'],
                 people: [
                     { name: 'aa', age:'18'},
                     { name: 'bb', age:'19'},
                     { name: 'cc', age:'20'}
-                ]
+                ],
+                isRed: false
             },
             methods: {
                 add() {
@@ -49,6 +78,9 @@
                 },
                 reduce() {
                     this.count--
+                },
+                changeColor() {
+                    this.isRed=!this.isRed
                 }
             },
             beforeCreate() {
