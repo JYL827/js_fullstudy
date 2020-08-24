@@ -10,14 +10,20 @@
 
 <body>
     <div id="app">
-        <!-- <div v-show="isSure">小祥哥很帅</div>
-        <div>铜锣湾扛把子</div> -->
-        <!-- <div class="item" v-for="item in people"> -->
-        <!-- <p>{{item.name}}-{{item.age}}</p> -->
-        <!-- </div> -->
-        <div class="msg">
-            <span>{{message}}</span><br />
-            <span v-text="message"></span>
+        <!-- <div v-show="isSure">我叫山鸡，jb的鸡</div>
+        <div>乌鸦哥</div> -->
+        <!-- <div class="item" v-for="item in people" :key="index">
+            <p>{{item.name}}-{{item.age}}</p>
+        </div> -->
+        <!-- <div class="msg">
+            <span>{{message}}</span><br/>
+            <span v-text="message"></span><br/>
+            <span v-html="newMessage"></span>
+        </div> -->
+        <div class="count">
+            <p>{{count}}</p>
+            <button v-on:click="add">+</button>
+            <button @click="reduce">-</button>
         </div>
     </div>
 
@@ -25,48 +31,51 @@
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello World',
-                newMessage: '<h2>Hello Vue</h2>',
-                isSure: true,
-                list: [
-                    'a', 'b', 'c', 'd'
-                ],
+                message: 'Hello world',
+                newMessage:'<h2>Hello world</h2>',
+                isSure: false,
+                count:0,
+                list: ['a', 'b', 'c', 'd'],
                 people: [
-                    { name: '祥祥', age: '18' },
-                    { name: '浩楠', age: '19' },
-                    { name: '元隆', age: '20' },
-                ],
-                count: 0
+                    { name: 'aa', age:'18'},
+                    { name: 'bb', age:'19'},
+                    { name: 'cc', age:'20'}
+                ]
             },
-            method: {
+            methods: {
                 add() {
+                    // console.log('666');
                     this.count++
+                },
+                reduce() {
+                    this.count--
                 }
             },
-
             beforeCreate() {
-                console.log('beforeCreate')
+                console.log('beforeCreate');
             },
-
             created() {
-                console.log('created')
+                console.log('created');
             },
-
             beforeMount() {
-                console.log('beforeMount')
+                console.log('beforeMount');
             },
-
             mounted() {
-                console.log('mounted')
+                console.log('mounted');
             },
-
+            beforeUpdate() {
+                console.log('beforeUpdate');
+            },
+            updated() {
+                console.log('updated');
+            },
             beforeDestroy() {
-
+                console.log('beforeDestroy');
             },
-
             destroyed() {
-
+                console.log('destroyed');
             }
+
         })
     </script>
 </body>
