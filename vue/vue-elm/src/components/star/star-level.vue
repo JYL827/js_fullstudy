@@ -26,7 +26,7 @@ export default {
             return 'size-'+this.size
         },
         itemclasses() {
-            console.log(this.score)
+            // console.log(this.score)
             let result = [];
             //0.5的倍数
             let score = Math.floor(this.score*2)/2;
