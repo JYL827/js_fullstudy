@@ -6,6 +6,7 @@
                     <h1 class="name">{{seller.name}}</h1>
                     <div class="star-wrapper">
                     <!-- 星星组件 -->
+                    <star-level :size="24" :score="seller.score"></star-level>
                     </div>
                     <div class="title">
                         <div class="line"></div>
@@ -37,6 +38,7 @@
 
 <script>
 import SupportIco from '@/components/support-ico/support-ico'
+import StarLevel from '@/components/star/star-level'
 export default {
     props:{
         seller: {
@@ -47,7 +49,8 @@ export default {
         }
     },
     components: {
-        SupportIco
+        SupportIco,
+        StarLevel
     },
     data() {
         return {
