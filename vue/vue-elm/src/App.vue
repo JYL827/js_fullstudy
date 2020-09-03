@@ -2,36 +2,46 @@
   <div id="app">
     <!-- header组件 -->
     <v-header :seller="seller"></v-header>
-    <router-view/>
+    <div class="tab">
+      <div class="tab-wrapper">
+        <router-link to="/">商品</router-link>
+      </div>
+      <div class="tab-wrapper">
+        <router-link to="/comment">评论</router-link>
+      </div>
+      <div class="tab-wrapper">
+        <router-link to="/seller">商家</router-link>
+      </div>
+    </div>
+    <router-view :data="seller"/>
   </div>
 </template>
 
 <script>
-import VHeader from '@/components/v-header/v-header.vue';
-import { getSeller } from '@/api';
-import qs from 'query-string'
+import VHeader from "@/components/v-header/v-header.vue";
+import { getSeller } from "@/api";
+import qs from "query-string";
 
 export default {
   data() {
     return {
       seller: {
-        id: qs.parse(location.search).id
+        id: qs.parse(location.search).id,
       },
-    }
+    };
   },
-  created () {
-    this._getSeller()
+  created() {
+    this._getSeller();
   },
   methods: {
     _getSeller() {
       getSeller({
-        id: this.seller.id
+        id: this.seller.id,
       }).then((seller) => {
         // console.log(seller)
-        this.seller = Object.assign({}, this.seller, seller)
-
-      })
-    }
+        this.seller = Object.assign({}, this.seller, seller);
+      });
+    },
   },
   components: {
     VHeader,
@@ -40,5 +50,20 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+@import './common/stylus/variable.styl';
+  .tab
+    width 100%
+    display flex
+    height 36px
+    line-height 36px
+    &-wrapper
+      flex 1
+      text-align center
+      color $color-font
+      a
+        display block
+        width 100%
+      .router-link-exact-active
+        color $color-red
+        border-bottom 2px solid $color-red
 </style>
