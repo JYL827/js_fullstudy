@@ -13,7 +13,9 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
+    <div class="page">
     <router-view :data="seller"/>
+    </div>
   </div>
 </template>
 
@@ -50,7 +52,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import './common/stylus/variable.styl';
+  @import './common/stylus/variable.styl';
+  .page
+    position fixed
+    top 174px
+    left 0
+    right 0
+    bottom 0
   .tab
     width 100%
     display flex
